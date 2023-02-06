@@ -116,14 +116,13 @@ const Home: NextPage = () => {
             <p className="text-left font-medium">Put the job description here</p>
           </div>
           <div className="block">
-            <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
             <textarea
             value={bio}
             onChange={(e) => setBio(e.target.value)}
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "Qualifications: Exposure to Data Scientist or Data Analyst roles (Previous Internship/Portfolio),building models, machine-learning, NLP, R, SQL, and Python"
+              "e.g. Qualifications: Exposure to Data Scientist or Data Analyst roles (Previous Internship/Portfolio),building models, machine-learning, NLP, R, SQL, and Python [<DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />]"
             }
           />
           </div>
