@@ -28,6 +28,11 @@ const Home: NextPage = () => {
           bio.slice(-1) === "." ? "" : "."
         }`;
 
+  const prompt2 = 
+        `Generate a preofessional cover letter for the following job description : ${vibe} based on this context: ${bio}${
+          bio.slice(-1) === "." ? "" : "."
+        }`
+  
   const generateBio = async (e: any) => {
     e.preventDefault();
     setGeneratedBios("");
@@ -99,7 +104,7 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Copy your current bio{" "}
+              Copy your current resume{" "}
               <span className="text-slate-500">
                 (or write a few sentences about yourself)
               </span>
@@ -117,7 +122,7 @@ const Home: NextPage = () => {
           />
           <div className="flex mb-5 items-center space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Select your vibe.</p>
+            <p className="text-left font-medium">Put the job description here</p>
           </div>
           <div className="block">
             <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
